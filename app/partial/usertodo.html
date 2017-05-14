@@ -1,0 +1,46 @@
+<div ng-controller="usertodo">
+    <div class="wrapper">
+        <ng-header />
+        <div class="wrapper-usertodo">
+            <div class="username">
+                <h2>{{name}}</h2>
+                <span>Listing Todos</span>
+            </div>
+            <div class="usertodos">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    <tbody>
+                        <tr ng-repeat="todo in todos">
+                            <td>{{todo.title}}</td>
+                            <td>
+                                {{todo.description}}
+                            </td>
+                            <td>
+                                {{todo.status}}
+                            </td>
+                            <td>
+                                {{todo.date}}
+                            </td>
+                            <td>
+                                <button value="delete" ng-click="deletetodo(name,$index)">Delete</button>
+                                <button value="update" ng-click="updatetodo()">Update</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+        <!--<ng-leftpanel />-->
+    </div>
+</div>
