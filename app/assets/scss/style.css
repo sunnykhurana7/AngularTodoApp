@@ -1,6 +1,6 @@
 .homepage {
   margin: 0;
-  background: url("https://p.w3layouts.com/demos/aug-2016/19-08-2016/eminent_login_form/web/images/banner.jpg");
+  background: url("../images/background_image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -25,7 +25,7 @@
 
 .nav-tabs li a {
   color: #ffffff;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
   border: none;
   text-align: center; }
@@ -41,11 +41,11 @@
 
 p.header {
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 1px;
   text-transform: uppercase; }
 
-.signin-form input[type="text"] {
+.signin-form input::placeholder, .signin-form input[type="text"], .signin-form input[type="password"], .signin-form input[type="email"] {
   padding: 10px;
   width: 100%;
   border: 1px solid rgba(30, 0, 41, 0);
@@ -58,35 +58,7 @@ p.header {
   margin-top: 1em;
   margin-bottom: 2em;
   font-weight: 600;
-  font-family: 'Poiret One', cursive; }
-.signin-form input[type="password"] {
-  padding: 10px;
-  width: 100%;
-  border: 1px solid rgba(30, 0, 41, 0);
-  color: #fff;
-  text-align: left;
-  outline: none;
-  letter-spacing: 1px;
-  font-size: 16px;
-  background-color: rgba(30, 0, 41, 0.57);
-  margin-top: 1em;
-  margin-bottom: 2em;
-  font-weight: 600;
-  font-family: 'Poiret One', cursive; }
-.signin-form input[type="email"] {
-  padding: 10px;
-  width: 100%;
-  border: 1px solid rgba(30, 0, 41, 0);
-  color: #fff;
-  text-align: left;
-  outline: none;
-  letter-spacing: 1px;
-  font-size: 16px;
-  background-color: rgba(30, 0, 41, 0.57);
-  margin-top: 1em;
-  margin-bottom: 2em;
-  font-weight: 600;
-  font-family: 'Poiret One', cursive; }
+  font-family: "Poiret One", cursive; }
 .signin-form input[type="submit"] {
   padding: 10px;
   background-color: rgba(7, 4, 7, 0.71);
@@ -96,7 +68,7 @@ p.header {
   color: #fff;
   outline: none;
   letter-spacing: 1px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 20px;
   margin-top: 30px;
@@ -109,13 +81,13 @@ p.header {
 #joinus p, #signin p {
   padding: 0; }
 #joinus input[type="text"], #signin input[type="text"] {
-  margin: 0; }
+  margin-bottom: 15px; }
 #joinus input[type="password"], #signin input[type="password"] {
-  margin: 0; }
+  margin-bottom: 15px; }
 #joinus input[type="button"], #signin input[type="button"] {
-  margin-top: 20px; }
+  margin-bottom: 15px; }
 #joinus input[type="email"], #signin input[type="email"] {
-  margin: 0; }
+  margin-bottom: 15px; }
 
 header {
   width: 100%;
@@ -135,7 +107,7 @@ header {
       float: right;
       font-size: 25px;
       text-transform: capitalize;
-      font-family: 'Poiret One', cursive;
+      font-family: "Poiret One", cursive;
       font-weight: bold;
       margin-top: 10px; }
 

@@ -4,6 +4,8 @@
    angular.module('myApplication')
        .controller('registerUser',registerUser);
 
+   registerUser.$inject = ['$scope','$localStorage'];
+
    function registerUser($scope,$localStorage) {
 
     $scope.addUser = function () {

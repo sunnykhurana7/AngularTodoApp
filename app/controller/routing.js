@@ -9,7 +9,6 @@
             '$urlRouterProvider',
             function ($locationProvider,$stateProvider,$urlRouterProvider) {
                 $urlRouterProvider.when('/','/TODOAPPLICATION');
-                // $urlRouterProvider.when('/','/todo');
 
                 $locationProvider.html5Mode({
                     enabled:true,

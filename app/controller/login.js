@@ -4,6 +4,8 @@
     angular
         .module('myApplication')
         .controller('loginController',authenticateUser);
+
+    authenticateUser.$inject = ['$scope','$localStorage','$state','$rootScope']
     
     function authenticateUser($scope,$localStorage,$state,$rootScope) {
         
@@ -18,7 +20,7 @@
              user.forEach(function (user) {
 
                  if((user.username==name) && (user.password==password)) {
-                     // $rootScope.authen = false;
+                     $rootScope.authen = true;
                      $state.go('todo',{'username':name});
                      return;
                  }

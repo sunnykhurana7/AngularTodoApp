@@ -19,7 +19,7 @@
 
                     <tbody>
                         <tr ng-repeat="todo in todos">
-                            <td>{{todo.title}}</td>
+                            <td>{{todo.title | uppercase}}</td>
                             <td>
                                 {{todo.description}}
                             </td>
@@ -27,11 +27,11 @@
                                 {{todo.status}}
                             </td>
                             <td>
-                                {{todo.date}}
+                                {{todo.date | date}}
                             </td>
                             <td>
                                 <button value="delete" ng-click="deletetodo(name,$index)">Delete</button>
-                                <button value="update" ng-click="updatetodo()">Update</button>
+                                <button value="update" ng-click="updatetodo(todo)">Update</button>
                             </td>
                         </tr>
                     </tbody>

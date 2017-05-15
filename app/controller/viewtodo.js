@@ -5,7 +5,15 @@
         .module('myApplication')
         .controller('usertodo',usertodo);
 
-    function usertodo($scope,$stateParams,$localStorage,toastr) {
+    usertodo.$inject = ['$scope','$stateParams','$localStorage','toastr','$rootScope']
+
+    function usertodo($scope,$stateParams,$localStorage,toastr,$rootScope) {
+
+        // check user is login
+        if($rootScope.authen == false) {
+            $state.go('logout')
+        }
+
         $scope.name = $stateParams.username;
 
         function findUsers(User) {
@@ -21,8 +29,9 @@
 
         }
         
-        $scope.updatetodo = function () {
+        $scope.updatetodo = function (todo) {
             alert('done update');
+            alert(todo)
         }
     }
 

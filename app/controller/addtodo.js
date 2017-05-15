@@ -4,8 +4,18 @@
     angular
         .module('myApplication')
         .controller('addtodo',addtodo);
+
+
+
+    addtodo.$inject = ['$scope','$localStorage','toastr','$rootScope']
     
-    function addtodo($scope,$localStorage,toastr) {
+    function addtodo($scope,$localStorage,toastr,$rootScope) {
+
+        // check user is login
+        if($rootScope.authen == false) {
+            $state.go('logout')
+        }
+
         $scope.add = function () {
 
             var todo = {
@@ -26,6 +36,9 @@
             }
 
         }
+
+
+
     }
 
 })();
